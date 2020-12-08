@@ -23,13 +23,11 @@ public struct Day3 {
             }
             
         }
-        
-        print("Found \(treeCount)")
         return treeCount
         
     }
-    public static func run() {
-       print(runSlope(x: 3, y: 1))
+    public static func run() -> Int {
+      return runSlope(x: 3, y: 1)
     }
 
     public static func run2() {
@@ -38,10 +36,5 @@ public struct Day3 {
         let slop3Tress = runSlope(x: 5, y: 1)
         let slop4Tress = runSlope(x: 7, y: 1)
         let slop5Tress = runSlope(x: 1, y: 2)
-        
-        print([slop1Tress, slop2Tress, slop3Tress, slop4Tress, slop5Tress]
-                .map { "\($0)"}.joined(separator: " * ")
-                + " = \([slop1Tress, slop2Tress, slop3Tress, slop4Tress, slop5Tress].reduce(1, *))")
-        print()
     }
 }

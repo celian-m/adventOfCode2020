@@ -24,8 +24,6 @@ public extension Day2 {
                 return 0
             }
         }
-        
-        print("Day 2 Completed \(matching.reduce(0, +))")
     }
     
     static func run2() {
@@ -48,7 +46,6 @@ public extension Day2 {
                 return 0
             }
         }
-        print("Day 2 Completed \(matching.reduce(0, +))")
     }
 }
 public struct Day2 {

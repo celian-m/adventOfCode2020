@@ -24,7 +24,7 @@ public extension String {
         return matches > 0
     }
     
-    public func matchValue(_ pattern: String, at: Int) -> String? {
+    func matchValue(_ pattern: String, at: Int) -> String? {
         let regexp = try! NSRegularExpression.init(pattern: pattern, options: [])
         let match = regexp.firstMatch(in: self, options: [], range: .init(location: 0, length: self.count))
         if let match = match,
@@ -34,8 +34,6 @@ public extension String {
         }
         
         return nil
-        
-        
     }
 }
 

@@ -18,7 +18,6 @@ public struct Day1 {
                 let val_i = Int(values[i]) ?? 0
                 let val_j = Int(values[j]) ?? 0
                 if val_i + val_j == 2020 {
-                    print("Solution \(val_i) * \(val_j) = \(val_j*val_i)")
                     return
                 }
             }
@@ -44,7 +43,6 @@ public struct Day1 {
                     if val_i + val_j + val_k > 2020 {
                         break
                     } else if val_i + val_j + val_k == 2020 {
-                        print("Solution \(val_i) * \(val_j) * \(val_k) = \(val_j*val_i*val_k)")
                         return
                     } else {
                         //print("Found \(val_i + val_j + val_k)")
