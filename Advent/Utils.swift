@@ -1,8 +1,7 @@
 import Foundation
-import PlaygroundSupport
 
 public extension String {
-    subscript(idx: Int) -> String {
+    public subscript(idx: Int) -> String {
         if idx >= self.count {
             fatalError("Out of bound exception. \(idx) is greatear than \(self.count)")
         }
@@ -11,8 +10,9 @@ public extension String {
     
     
     static func from(file: String) -> String {
-        guard let path = Bundle.main.path(forResource: file, ofType: "txt"),
-        let data = FileManager.default.contents(atPath: path), let string = String(data: data, encoding: .utf8) else {
+        guard let path = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first?.appendingPathComponent("Advent/Advent/\(file).txt"),
+              let data = FileManager.default.contents(atPath: path.path),
+              let string = String(data: data, encoding: .utf8) else {
             fatalError("Can not get json data")
         }
         return string
@@ -36,5 +36,20 @@ public extension String {
         return nil
     }
 }
+
+
+public protocol Day {
+    static func sanityCheck() -> Int
+    static func sanityCheck2() -> Int
+    
+    static func run() -> Int
+    static func run2() -> Int
+    
+}
+
+extension Day {
+
+}
+
 
 
