@@ -159,7 +159,7 @@ struct Day11 : Day {
     }
     
     
-    static func findAdjacents(at: (Int, Int), in list: [String], depth: Int) -> Int {
+    static func findAdjacents(at: (Int, Int), in list: [String]) -> Int {
         
         let (y,x) = at
         let directions: [(Int, Int)] = [

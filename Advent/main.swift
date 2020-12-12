@@ -9,5 +9,5 @@ import Foundation
 
 print("Hello, World!")
 
-let r = Day11.run2()
+let r = Day12.run2()
 print(r)
