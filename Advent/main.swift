@@ -7,7 +7,6 @@
 
 import Foundation
 
-print("Hello, World!")
 
-let r = Day12.run2()
+let r = Day13.run2()
 print(r)
