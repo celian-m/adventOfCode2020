@@ -1,7 +1,7 @@
 import Foundation
 
 public extension String {
-    public subscript(idx: Int) -> String {
+    subscript(idx: Int) -> String {
         if idx >= self.count {
             fatalError("Out of bound exception. \(idx) is greatear than \(self.count)")
         }
@@ -10,7 +10,7 @@ public extension String {
     
     
     static func from(file: String) -> String {
-        guard let path = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first?.appendingPathComponent("Advent/Advent/\(file).txt"),
+        guard let path = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first?.appendingPathComponent("AdventOfCode/Advent/\(file).txt"),
               let data = FileManager.default.contents(atPath: path.path),
               let string = String(data: data, encoding: .utf8) else {
             fatalError("Can not get json data")
